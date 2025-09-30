@@ -12,4 +12,9 @@ final List<Toutou> toutous = [
   Toutou(name: 'Molly', imageUrl: 'https://cdn.pixabay.com/photo/2015/11/17/13/13/puppy-1047521_640.jpg', age: 1),
   Toutou(name: 'Toby', imageUrl: 'https://cdn.pixabay.com/photo/2017/04/06/10/39/dog-2207925_640.jpg', age: 3),
   Toutou(name: 'Sadie', imageUrl: 'https://cdn.pixabay.com/photo/2022/08/16/10/32/dog-7389946_640.jpg', age: 5),
+  Toutou(name: 'piloune', imageUrl: 'https://i.imgur.com/4mHza1W.jpeg', age: 12),
+  Toutou(name: 'ventilateur', imageUrl: 'https://i.imgur.com/Mna0INt.jpeg', age: 5),
+  Toutou(name: 'claxoune', imageUrl: 'https://i.imgur.com/7GbASzr.jpeg', age: 60),
+  Toutou(name: 'ravioli', imageUrl: 'https://i.imgur.com/KVT6Zar.png', age: 115),
+  Toutou(name: 'bétoniére', imageUrl: 'https://i.imgur.com/kIUmVjz.jpeg', age: 30),
 ];

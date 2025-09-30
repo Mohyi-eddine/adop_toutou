@@ -1,5 +1,5 @@
 import 'package:adopttoutou/providers/loved_toutou_provider.dart';
-import 'package:adopttoutou/screens/list_toutou_screen.dart';
+import 'package:adopttoutou/screens/welcome_screen.dart';
 import 'package:adopttoutou/theme/app_colors.dart';
 import 'package:adopttoutou/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner : false,
       title: 'Adopttoutou',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.playfulOrange),
@@ -39,40 +40,12 @@ class MyApp extends StatelessWidget {
             ),
             elevation: 8,
             shadowColor: AppColors.playfulOrange.withOpacity(0.4),
-            textStyle: AppTextStyles.buttonText,
+            textStyle: AppTextStyles.button,
           ),
         ),
         useMaterial3: true,
       ),
-      home: const MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const ListToutouScreen()),
-            );
-          },
-          child: const Text(
-            "🐾 Join the Toutou World 🐾",
-          ),
-        ),
-      ),
+      home: const WelcomeScreen(),
     );
   }
 }

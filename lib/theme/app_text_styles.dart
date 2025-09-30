@@ -2,6 +2,13 @@
 import 'package:flutter/material.dart';
 
 class AppTextStyles {
+  static const TextStyle header = TextStyle(
+    fontFamily: 'Roboto', // Poppins Bold or Baloo for titles
+    fontSize: 36,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+  );
+
   static const TextStyle appTitle = TextStyle(
     fontFamily: 'Roboto', // Poppins Bold or Baloo for titles
     fontSize: 28,
@@ -19,10 +26,10 @@ class AppTextStyles {
   static const TextStyle bodyText = TextStyle(
     fontFamily: 'Roboto', // Nunito or Roboto for body text
     fontSize: 16,
-    color: Colors.black,
+    color: Colors.white,
   );
 
-  static const TextStyle buttonText = TextStyle(
+  static const TextStyle button = TextStyle(
     fontFamily: 'Roboto', // Nunito or Roboto for body text
     fontSize: 18,
     fontWeight: FontWeight.bold,

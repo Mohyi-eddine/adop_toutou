@@ -4,6 +4,8 @@ import 'package:adopttoutou/theme/app_text_styles.dart';
 import 'package:adopttoutou/widgets/love_me_button.dart';
 import 'package:flutter/material.dart';
 
+import 'package:adopttoutou/widgets/cloud_painter.dart';
+
 class ToutouWidget extends StatelessWidget {
   final Toutou toutou;
 
@@ -34,20 +36,29 @@ class ToutouWidget extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 10,
-            left: 10,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  toutou.name,
-                  style: AppTextStyles.cardTitle,
+            top: -30,
+            left: -30,
+            child: SizedBox(
+              width: 190,
+              height: 150,
+              child: CustomPaint(
+                painter: CloudPainter(color: AppColors.playfulOrange.withOpacity(0.9)),
+                child: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        toutou.name,
+                        style: AppTextStyles.cardTitle.copyWith(color: AppColors.white),
+                      ),
+                      Text(
+                        '${toutou.age} years old',
+                        style: AppTextStyles.bodyText.copyWith(color: AppColors.white),
+                      ),
+                    ],
+                  ),
                 ),
-                Text(
-                  '${toutou.age} years old',
-                  style: AppTextStyles.bodyText.copyWith(color: AppColors.white),
-                ),
-              ],
+              ),
             ),
           ),
           Positioned(
