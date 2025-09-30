@@ -21,7 +21,7 @@ class LovedCreaturesScreen extends StatelessWidget {
             return Center(
               child: Text(
                 'No loved creatures yet! 😢',
-                style: AppTextStyles.bodyText,
+                selectionColor: Colors.grey,
               ),
             );
           }

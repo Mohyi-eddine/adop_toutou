@@ -1,5 +1,6 @@
 
 import 'package:adopttoutou/data/toutou_data.dart';
+import 'package:adopttoutou/screens/featured_toutou_screen.dart';
 import 'package:adopttoutou/screens/loved_creatures_screen.dart';
 import 'package:adopttoutou/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
@@ -35,6 +36,15 @@ class ListToutouScreen extends StatelessWidget {
             ),
           );
         },
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const FeaturedToutouScreen()),
+          );
+        },
+        child: const Icon(Icons.star),
       ),
     );
   }
